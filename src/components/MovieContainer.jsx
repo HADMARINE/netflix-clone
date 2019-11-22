@@ -67,24 +67,12 @@ const MovieContainer = props => {
   };
   return (
     <Wrapper transform={page * (sliderWidth + 10)}>
-      <div className="title">TV 프로그램 ∙ 코미디</div>
+      <div className="title">{props.name}</div>
       <div className="container">
         <BtnLeft onClick={onClickLeft}>{"<"}</BtnLeft>
         <BtnRight onClick={onClickRight}>></BtnRight>
         <div className="slider" ref={slider}>
-          {props.pop_data.map(value => (
-            <Movieitem
-              title={value.title}
-              src={"http://image.tmdb.org/t/p/w185" + value.backdrop_path}
-            />
-          ))}
-        </div>
-      </div>
-      <div className="container">
-        <BtnLeft onClick={onClickLeft}>{"<"}</BtnLeft>
-        <BtnRight onClick={onClickRight}>></BtnRight>
-        <div className="slider" ref={slider} style={{ paddingTop: "3rem" }}>
-          {props.trend_data.map(value => (
+          {props.data.map(value => (
             <Movieitem
               title={value.title}
               src={"http://image.tmdb.org/t/p/w185" + value.backdrop_path}

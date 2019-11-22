@@ -27,7 +27,7 @@ const Wrapper = styled.div`
 const Movieitem = props => {
   return (
     <Wrapper>
-      <img src={props.src} alt={props.title} width="100%" />
+      <img src={props.src} alt={props.title} width="90%" />
       <div>{props.title}</div>
     </Wrapper>
   );

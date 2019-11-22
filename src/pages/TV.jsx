@@ -3,7 +3,7 @@ import Banner from "../components/Banner";
 import Preview from "../components/Preview";
 import MovieContainer from "../components/MovieContainer";
 import Axios from "axios";
-import WithLayout from "../components/WithLayout";
+import withLayout from "../components/WithLayout";
 
 class Main extends React.Component {
   constructor(props) {
@@ -48,4 +48,4 @@ class Main extends React.Component {
   }
 }
 
-export default WithLayout(Main);
+export default withLayout(Main);

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -17,6 +18,7 @@ const Wrapper = styled.div`
 const Logo = styled.img`
   height: 100%;
   margin-right: 30px;
+  margin-top: 20px;
 `;
 
 const NavText = styled.ul`
@@ -59,8 +61,12 @@ const Banner = props => {
     <Wrapper>
       <Logo src="https://cdn.pixelprivacy.com/wp-content/uploads/2017/12/Netflix-Logo-1024x277.png" />
       <NavText>
-        <NavTextItem className="select">홈</NavTextItem>
-        <NavTextItem>TV 프로그램</NavTextItem>
+        <NavTextItem className="select">
+          <Link to="/">홈</Link>
+        </NavTextItem>
+        <NavTextItem>
+          <Link to="/tv">TV 프로그램</Link>
+        </NavTextItem>
         <NavTextItem>영화</NavTextItem>
         <NavTextItem>최신 등록 콘텐츠</NavTextItem>
         <NavTextItem>내가 찜한 콘텐츠</NavTextItem>
